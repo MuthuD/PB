@@ -7,6 +7,7 @@
 
 // FloatingTypesUsage.Run();
 
-ControlStatements.Run();
+// ControlStatements.Run();
 
+LoopStatements.Run();
 Console.ReadKey();
