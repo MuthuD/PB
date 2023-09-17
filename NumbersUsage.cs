@@ -1,9 +1,3 @@
-public class Person {
-    
-}
-
-
-
 public class NumbersUsage {
 
     public static void WriteError(string msg){
