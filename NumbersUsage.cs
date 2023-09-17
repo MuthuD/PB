@@ -1,4 +1,68 @@
+public class Person {
+    
+}
+
+
+
 public class NumbersUsage {
+
+    public static void WriteError(string msg){
+        Console.ForegroundColor = ConsoleColor.Red;
+        Console.WriteLine(msg);
+        Console.ForegroundColor = ConsoleColor.Black;
+    }
+
+    public static double Add(double a, double b, double c = 0, double d = 0) {
+        if ( a < 1 || b < 1 /*|| c < 1 || d < 1 */) {
+            WriteError("Invalid Numbers!...");
+            return 0;   
+        }
+
+        double result = a + b + c + d;
+        return result;
+    }
+    // public static double Add(double a, double b, double c) {
+    //     if ( a < 1 || b < 1 || c < 1) {
+    //         Console.WriteLine("Invalid Number!...");
+    //         return 0;   
+    //     }
+
+    //     double result = a + b + c;
+    //     return result;
+    // }
+
+    // public static double Add(int a, int b) {
+    //     if ( a < 1 || b < 1) {
+    //         Console.WriteLine("Invalid Number!...");
+    //         return 0;   
+    //     }
+
+    //     double result = a + b;
+    //         return result;
+    // }
+
+    // public static double Add(double value1, double value2) {
+    //     if ( a < 1 || b < 1) {
+    //         Console.WriteLine("Invalid Number!...");
+    //         return 0;   
+    //     }
+
+    //     double result = a + b;
+    //         return result;
+    // }
+
+    public static void MethodOverloadingExample() {
+        double a = 10;
+        double b = 5;
+        double c = 20;
+        double d = 3;
+
+        Console.WriteLine(Add(a, b));
+        Console.WriteLine(Add(a, b, c));
+        Console.WriteLine(Add(a, b, c, d));
+        Console.WriteLine(Add(a, 0));
+    }
+
     public static void Run(){
         Console.WriteLine("Working with Numbers");
 
@@ -9,7 +73,9 @@ public class NumbersUsage {
         Console.WriteLine($"a={a} b={b}");  
 
         // Arichmetic Operators=> + - * / %
-        int c = a + b;
+        double c = Add(a, b);
+        
+
         Console.WriteLine($"a + b =  {c}");
 
         c = a - b;
